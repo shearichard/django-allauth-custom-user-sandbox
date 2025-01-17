@@ -2,4 +2,4 @@
 # Django Secret Key
 export AACU_SECRET_KEY="PLACEHOLDER_VALUE_TODO_SECRET_KEY"
 #Define where the Django settings to be used are
-#export DJANGO_SETTINGS_MODULE=backend.settings.local
+export DJANGO_SETTINGS_MODULE=core.settings
