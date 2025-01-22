@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+from os.path import join, normpath
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -21,6 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-qdrx(hq8cki!&%*q70zk!l89tr32b*vngf=)=7a8d!kr4nd-dm'
+
+# Instead of sending emails for the moment just write them out to the file system
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = Path(BASE_DIR, '..','email_proxy_to_file_system')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -65,7 +70,9 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            normpath(join(BASE_DIR, 'templates')),
+        ], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,6 +84,9 @@ TEMPLATES = [
         },
     },
 ]
+print("*" * 50)
+print(TEMPLATES)
+print("*" * 50)
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
@@ -151,7 +161,10 @@ AUTH_USER_MODEL = "users.CustomUser"
 SITE_ID = 1
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-redirect-url
-LOGIN_REDIRECT_URL = "home"
+#LOGIN_REDIRECT_URL = "home"
+#LOGIN_REDIRECT_URL = "https://www.google.com"
+#LOGIN_REDIRECT_URL = ""
+LOGIN_REDIRECT_URL = "home3"
 
 # https://django-allauth.readthedocs.io/en/latest/views.html#logout-account-logout
 ACCOUNT_LOGOUT_REDIRECT_URL = "home"
