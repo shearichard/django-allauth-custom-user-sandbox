@@ -164,6 +164,7 @@ SITE_ID = 1
 #LOGIN_REDIRECT_URL = "home"
 #LOGIN_REDIRECT_URL = "https://www.google.com"
 #LOGIN_REDIRECT_URL = ""
+#LOGIN_REDIRECT_URL = "home3"
 LOGIN_REDIRECT_URL = "home3"
 
 # https://django-allauth.readthedocs.io/en/latest/views.html#logout-account-logout

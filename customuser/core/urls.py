@@ -28,3 +28,4 @@ urlpatterns = [
 #path('', TemplateView.as_view(template_name='index.html'), name='dacusindex'),
     #re_path(r'^$', TemplateView.as_view(template_name='index.html'), name='dacusindex'),
     #re_path(r'^$', TemplateView.as_view(template_name='index.html'), name='dacusindex'),
+    #path('home4/', TemplateView.as_view(template_name='index.html'), name='dacusindex'),
