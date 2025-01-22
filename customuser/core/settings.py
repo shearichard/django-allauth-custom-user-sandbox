@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.openid_connect',
     'corsheaders',
+    'django_extensions',
     # Local
     'users',
 ]

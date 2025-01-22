@@ -8,6 +8,7 @@ django = "*"
 djangorestframework = "*"
 django-allauth = {extras = ["socialaccount"], version = "*"}
 django-cors-headers = "*"
+django-extensions = "*"
 
 [dev-packages]
 
