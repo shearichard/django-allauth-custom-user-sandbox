@@ -84,9 +84,6 @@ TEMPLATES = [
         },
     },
 ]
-print("*" * 50)
-print(TEMPLATES)
-print("*" * 50)
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
