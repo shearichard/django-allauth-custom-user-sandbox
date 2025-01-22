@@ -17,9 +17,10 @@ Including another URLconf
 from django.views.generic.base import TemplateView
 from django.contrib import admin
 from django.urls import re_path, path, include
-from .views import signup_confirmation_view 
+from .views import signup_confirmation_view, home_page_view 
 
 urlpatterns = [
+    path('', home_page_view, name='homepage'), 
     path('signup-confirmation/', signup_confirmation_view, name='signupconfirmation'), 
     path('admin/', admin.site.urls),
     path("accounts/", include("allauth.urls")),
