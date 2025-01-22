@@ -20,7 +20,7 @@ from django.urls import re_path, path, include
 from .views import HomePageView, home_page_view2, home_page_view3 
 
 urlpatterns = [
-    path('home3/', home_page_view3, name='home3'), 
+    path('home3/', home_page_view3, name='dacusindex'), 
     path('admin/', admin.site.urls),
     path("accounts/", include("allauth.urls")),
 ]
